@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="">
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+  .content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #faf6f6;
+  width: 100%;
+  padding: 20px;
+}
+
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links{
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+ nav-links ul li a {
+  color:#fff;
+  text-decoration: none;
+  font-size: 13px;
+ }
+
+ nav .fa{
+  display: none;
+ }
+
+ @media(max-width: 700px) {
+  .nav-links ul li{
+    display: block;
+  }
+  nav .fa{
+      display: block;
+      color: #fff;
+      margin: 10px;
+      font-size: 22px;
+      cursor: pointer;
+  }
+  .nav-links ul{
+      padding: 30px;
+  }
+ }
+
+ .nav-links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+}
+
+#myBtn {
+  width: 100px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #f8f8f8;
+  color: black;
+}
+html {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  display: fixed;
+  block-size: 100vh;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.Discover{
+  position: relative;
+  left: 100%;
+  
+}
+
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="bgvideo.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <h1>AI NEW Future For all</h1>
+  <p>Wow! Technology has taken giant leaps forward, unleashing limitless opportunities for people to tap into the potential of artificial intelligence like never before.This has led to a major revolution in the AI industry, enabling individuals from all backgrounds to harness its immense power in line with their specific needs. Want to learn more about AI click the Discover link bellow.
+  </p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+ 
+<div class="discover">
+  <button></button><a href="discover.html">Discover</a></button>
+</div> 
+
+  
+
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+
+</script>
+
+
+
+</body>
+</html>
